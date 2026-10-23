@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Web Profile - Fitri Rahma</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: Arial, sans-serif; margin: 0; background: #eef1f5; color: #222; }
+  .wrapper { max-width: 960px; margin: 20px auto; background: #fff; border: 2px solid #333; }
+
+  /* HEADER */
+  header { display: flex; align-items: center; gap: 12px; padding: 12px 20px; background: #1f3a5f; color: #fff; }
+  header img { width: 50px; height: 50px; }
+  header h1 { margin: 0; font-size: 22px; }
+
+  /* NAV */
+  nav { background: #2d5a8e; }
+  nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
+  nav a { display: block; padding: 10px 18px; color: #fff; text-decoration: none; }
+  nav a:hover { background: #1f3a5f; }
+
+  /* AREA UTAMA: article + aside */
+  .main { display: flex; gap: 20px; padding: 20px; }
+  article { flex: 3; }
+  aside { flex: 1; border-left: 1px solid #ccc; padding-left: 16px; }
+
+  .biodata { display: flex; gap: 20px; align-items: flex-start; flex-wrap: wrap; }
+  .biodata img { width: 180px; height: 220px; object-fit: cover; border: 2px solid #333; }
+  .biodata h2 { margin: 0 0 8px; font-size: 28px; }
+  table td { padding: 3px 10px 3px 0; vertical-align: top; }
+  section { margin-bottom: 20px; }
+  section h3 { border-bottom: 2px solid #2d5a8e; padding-bottom: 4px; }
+  p { text-align: justify; line-height: 1.6; }
+
+  /* ASIDE */
+  aside h3 { margin-top: 0; }
+  video { width: 100%; background: #000; }
+  .galeri { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 12px 0; }
+  .galeri img { width: 100%; height: 90px; object-fit: cover; border: 1px solid #999; }
+  .attachments { border: 1px solid #333; padding: 8px 12px; }
+  .attachments ul { margin: 6px 0 0; padding-left: 18px; }
+
+  footer { text-align: center; padding: 10px; background: #1f3a5f; color: #fff; font-size: 13px; }
+
+  @media (max-width: 700px) {
+    .main { flex-direction: column; }
+    aside { border-left: none; padding-left: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- HEADER: logo + nama web -->
+  <header>
+    <img src="logo.png" alt="Logo">
+    <h1>Web Profile Fitri Rahma</h1>
+  </header>
+
+  <!-- NAV: menu -->
+  <nav>
+    <ul>
+      <li><a href="#biodata">Home</a></li>
+      <li><a href="#deskripsi">Tentang Saya</a></li>
+      <li><a href="#multimedia">Multimedia</a></li>
+      <li><a href="#download">Download</a></li>
+    </ul>
+  </nav>
+
+  <div class="main">
+
+    <!-- ARTICLE: berisi section-section -->
+    <article>
+      <section id="biodata" class="biodata">
+        <img src="fitri.jpeg" alt="Foto diri">
+        <div>
+          <h2>Fitri Rahma</h2>
+          <table>
+            <tr><td>Tempat, Tgl Lahir</td><td>: sangia, 26 Januari 2009</td></tr>
+            <tr><td>Jenis Kelamin</td><td>: Perempuan</td></tr>
+            <tr><td>Alamat</td><td>: Jl.  No. 10, Depok</td></tr>
+            <tr><td>Kampus</td><td>: STT Terpadu Nurul Fikri</td></tr>
+            <tr><td>Email</td><td>: <a href="mailto:fitri@email.com">fitri@email.com</a></td></tr>
+            <tr><td>Telepon</td><td>: 0812 3456 7890</td></tr>
+            <tr><td>Hobi</td><td>: Membaca dan desain</td></tr>
+          </table>
+        </div>
+      </section>
+
+      <section id="deskripsi">
+        <h3>Deskripsi Diri</h3>
+        <p>Saya Fitri Rahma, mahasiswa STT Terpadu Nurul Fikri yang sedang mendalami dunia teknologi informasi. Saya tertarik pada pengembangan web dan desain antarmuka karena menurut saya tampilan yang rapi membuat sebuah aplikasi lebih mudah digunakan.</p>
+        <p>Saya terbiasa bekerja dalam tim, senang belajar hal baru, dan berusaha menyelesaikan setiap tugas dengan tepat waktu. Ke depan, saya ingin menjadi pengembang yang mampu membuat produk digital yang bermanfaat.</p>
+      </section>
+    </article>
+
+    <!-- ASIDE: konten multimedia -->
+    <aside id="multimedia">
+      <h3>Multimedia</h3>
+
+      <video controls>
+        <source src="fit.mp4" type="video/mp4">
+        Browser Anda tidak mendukung tag video.
+      </video>
+
+      <div class="galeri">
+        <img src="pit.jpg" alt="Foto 1">
+        <img src="rahma.jpg" alt="Foto 2">
+        <img src="fifit.jpg" alt="Foto 3">
+        <img src="fitrah.jpg" alt="Foto 4">
+      </div>
+
+      <div class="attachments" id="download">
+        <strong>Attachments</strong>
+        <ul>
+          <li><a href="cv_fitri_rahma.pdf" download>Download CV</a></li>
+          <li><a href="portofolio.pdf" download>Download Portofolio</a></li>
+          <li><a href="sertifikat.pdf" download>Download Sertifikat</a></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>&copy; 2026 Fitri Rahma - Praktikum 3 Desain UI/UX Pem Web</footer>
+</div>
+</body>
+</html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  
+</body>
+
+</html>
